@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Salad</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+    :root {
+      /* colors */
+      --light-green-clr: #6aad72;
+      --dark-green-clr: #3f8347;
+      --foggy-grey-clr: #505050;
+      --body-clr: #767676;
+      --btn-text-clr: #f0f0f0;
+      --sub-header-clr: #1b1b1b;
+      --black-clr: #000000;
+
+      /* font & size */
+      --fs-xxl: 2.6875rem;
+      --fs-xl: 2.375rem;
+      --fs-lg: 1.75rem;
+      --fs-sub-header: 1.125rem;
+      --fs-md: 1rem;
+      --fs-sm: 0.875rem;
+      --fs-xs: 0.75rem;
+
+      --ff-primary: "Lato", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      height: 100%;
+    }
+
+    body {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: var(--ff-primary);
+      line-height: 1;
+      font-size: var(--fs-md);
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    /* util classes */
+    .xxl {
+      font-size: var(--fs-xxl);
+    }
+
+    .xl {
+      font-size: var(--fs-xl);
+    }
+
+    .lg {
+      font-size: var(--fs-lg);
+    }
+
+    .sub-header {
+      font-size: var(--fs-sub-header);
+    }
+
+    .light-green {
+      color: var(--light-green-clr);
+    }
+
+    .dark-green {
+      color: var(--dark-green-clr);
+    }
+
+    .foggy-grey {
+      color: var(--foggy-grey-clr);
+    }
+
+    .header-body {
+      color: var(--body-clr);
+      font-size: var(--fs-md);
+    }
+
+    .btn {
+      width: 150px;
+      background-color: var(--light-green-clr);
+      border: none;
+      padding: 15px;
+      color: var(--btn-text-clr);
+      border-radius: 6rem;
+    }
+
+    .logo-container {
+      width: 100%;
+    }
+
+
+    /* hero section */
+    .hero {
+      display: flex;
+      width: 100%;
+      height: 600px;
+      background-image: url("https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/header-bg-big.jpg");
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+    }
+
+    .hero-logo {
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-body {
+      max-width: 65%;
+      line-height: 1.5;
+    }
+
+    /* recipe section */
+    .recipe-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .recipe-logo {
+      width: 225px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .recipes {
+      padding: 0 2rem;
+    }
+    
+    .recipes-row-1 {
+      display: flex;
+      gap: 4rem;
+    }
+    @media screen and (max-width: 375px) {
+      .hero {
+        height: 750px;
+        background-repeat: unset;
+        background-position: top;
+      }
+
+      .hero-container {
+        justify-content: unset;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+
+  <body>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="img-container">
+          <img
+            class="hero-logo"
+            src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/logo.png"
+            alt=""
+          />
+        </div>
+        <h1 class="xxl light-green" style="text-transform: uppercase">
+          Save time <br /><span class="xl dark-green">With easy salad</span>
+          <br /><span class="lg foggy-grey">meal prep kits</span>
+        </h1>
+        <p class="header-body hero-body">
+          The shortcut to grab a fresh and delicious salads from our kitchen
+          right to your door. Up your game with our meal kits. Get 30% off on
+          all your orders this month.
+        </p>
+        <button class="btn">Get 30% off</button>
+      </div>
+    </section>
+    <section class="recipe">
+  
+    </section>
+  </body>
+</html>
