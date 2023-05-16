@@ -10,6 +10,7 @@
     @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
     :root {
       /* colors */
+      --bkg-sub-header-clr: #f3f3f3;
       --light-green-clr: #6aad72;
       --dark-green-clr: #3f8347;
       --foggy-grey-clr: #505050;
@@ -17,6 +18,7 @@
       --btn-text-clr: #f0f0f0;
       --sub-header-clr: #1b1b1b;
       --black-clr: #000000;
+      --white-clr: #fff;
 
       /* font & size */
       --fs-xxl: 2.6875rem;
@@ -89,6 +91,7 @@
       font-size: var(--fs-lg);
     }
 
+
     .sub-header {
       font-size: var(--fs-sub-header);
     }
@@ -111,16 +114,34 @@
     }
 
     .btn {
-      width: 150px;
+      width: 175px;
       background-color: var(--light-green-clr);
       border: none;
-      padding: 15px;
+      padding: 10px;
       color: var(--btn-text-clr);
+      border-radius: 6rem;
+    }
+
+    .invert-btn {
+      width: 175px;
+      background-color: var(--white-clr);
+      border: solid 1px var(--black-clr);
+      padding: 10px;
       border-radius: 6rem;
     }
 
     .logo-container {
       width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
     }
 
 
@@ -132,14 +153,6 @@
       background-image: url("https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/header-bg-big.jpg");
       background-repeat: no-repeat;
       background-position: top;
-    }
-
-    .hero-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-      padding: 3rem;
     }
 
     .hero-logo {
@@ -154,43 +167,111 @@
     }
 
     /* recipe section */
-    .recipe-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
     .recipe-logo {
       width: 225px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .recipes {
-      padding: 0 2rem;
+    .card-img  {
+      width: 100%;
     }
     
-    .recipes-row-1 {
+    .recipe-row-1 {
       display: flex;
+      flex-direction: row;
       gap: 4rem;
     }
-    @media screen and (max-width: 375px) {
+
+    .md-card {
+      background-color: var(--bkg-sub-header-clr);
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+      line-height: 1.25;
+    }
+
+    .recipe-row-1 > .md-card > .card-body h1 {
+      font-weight: lighter;
+    }
+
+    .lg-card > .card-body {
+      text-align: center;
+      align-items: center;
+    }
+
+
+    /* create section */
+    .create {
+      display: flex;
+      width: 100%;
+      height: 500px;
+      background-image: url("https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/ingredients-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
+    .create > .container {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      line-height: 1.5;
+    }
+
+    /* kit section */
+
+    .kit > .container {
+      padding: 3rem 0;
+    }
+
+    .kit-img {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .kit-card {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .kit-card > .card-body {
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    @media screen and (max-width: 400px) {
       .hero {
         height: 750px;
         background-repeat: unset;
         background-position: top;
       }
 
-      .hero-container {
+      .container {
         justify-content: unset;
         gap: 1.5rem;
+      }
+
+      .recipe-row-1 {
+      flex-direction: column;
+      }
+    }
+
+
+    @media screen and (max-width: 600px) {
+      .kit-card {
+        flex-direction: column;
       }
     }
   </style>
 
   <body>
     <section class="hero">
-      <div class="hero-container">
+      <div class="container">
         <div class="img-container">
           <img
             class="hero-logo"
@@ -211,7 +292,56 @@
       </div>
     </section>
     <section class="recipe">
-  
+      <div class="container">
+        <div class="img-container">
+          <img class="recipe-logo" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/fresh-recipes-logo-outline.png" alt="">
+        </div>
+        <div class="recipe-row-1">
+          <article class="md-card">
+            <img class="card-img" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/recipe1.jpg" alt="">
+            <div class="card-body">
+              <h1 class="card-sub-header light-green sub-header">Light and fresh local tomatoes and feta</h1>
+              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            </div>
+          </article>
+          <article class="md-card">
+            <img class="card-img" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/recipe1.jpg" alt="">
+            <div class="card-body">
+              <h1 class="card-sub-header light-green sub-header">Avocado, farm eggs and freshly tomatoes</h1>
+              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            </div>
+          </article>
+        </div>
+        <div class="recipe-row-2">
+        <article class="lg-card">
+          <img class="card-img" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/img-body-leafs.png" alt="">
+          <div class="card-body">
+            <h1 class="card-sub-header sub-header">Taste the Summer!</h1>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="invert-btn">order this</button>
+          </div>
+        </article>
+      </div>
+      </div>
+    </section>
+    <section class="create">
+      <div class="container">
+        <h1 class="foggy-grey sub-header">Max freshness for you!</h1>
+        <h1 class="xxl light-green">From farm <br><span class="xl dark-green">to our meal kits</span></h1>
+        <button class="btn">create my own meal</button>
+      </div>
+    </section>
+    <section class="kit">
+      <div class="container">
+        <article class="md-card kit-card">
+          <img class="kit-img" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/recipe3.jpg" alt="">
+          <div class="card-body">
+            <h1 class="sub-header">Freshly meal kits</h1>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <button class="invert-btn">shop meal kits</button>
+          </div>
+        </article>
+      </div>
     </section>
   </body>
 </html>
