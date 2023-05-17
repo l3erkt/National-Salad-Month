@@ -61,6 +61,11 @@
       max-width: 100%;
     }
 
+    ul, li, a {
+      list-style: none;
+      text-decoration: none;
+    }
+
     input,
     button,
     textarea,
@@ -91,6 +96,12 @@
       font-size: var(--fs-lg);
     }
 
+    .sm {
+      font-size: var(--fs-sm);
+    }
+    .xs {
+      font-size: var(--fs-xs);
+    }
 
     .sub-header {
       font-size: var(--fs-sub-header);
@@ -244,6 +255,47 @@
       gap: 2rem;
     }
 
+    /* slogins */
+    .logos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .logos img {
+      width: 125px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+
+    /* footer section */
+    .footer > .container {
+      padding: 2rem 1rem;
+    }
+
+    .footer {
+      background-color: var(--light-green-clr);
+      color: var(--white-clr);
+      margin: 2rem 0;
+    }
+    
+    .website {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+
     @media screen and (max-width: 400px) {
       .hero {
         height: 750px;
@@ -264,6 +316,10 @@
 
     @media screen and (max-width: 600px) {
       .kit-card {
+        flex-direction: column;
+      }
+
+      .logos { 
         flex-direction: column;
       }
     }
@@ -341,6 +397,35 @@
             <button class="invert-btn">shop meal kits</button>
           </div>
         </article>
+      </div>
+    </section>
+    <section class="slogin">
+        <div class="logos">
+          <article>
+            <img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/bowl-icon.png" alt="">
+            <h1>Simple</h1>
+          </article>
+          <article>
+            <img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/fresh-icon.png" alt="">
+            <h1>Fresh</h1>
+          </article>
+          <article>
+            <img src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/3511/clock-icon.png" alt="">
+            <h1>Convenient</h1>
+          </article>
+        </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="website">
+          <h1 class="sub-header">Visit our website and get your discount on our meal kits.</h1>
+          <ul class="content">
+            <li class="xs">MEAL KITS</li>
+            <li class="xs">INGREDIENTS</li>
+            <li class="xs">CUSTOM MEALS</li>
+          </ul>
+          <p>www.example.com</p>
+        </div>
       </div>
     </section>
   </body>
